@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    --light: #ffecc7;
+    --dark: #4b2912;
+    --colored: #e0b481;
+}
+@font-face {
+    font-family: flag;
+    src: url(../media/KGChasingCars.ttf);
+}
+@font-face {
+    font-family: comics;
+    src: url(../media/Hey\ Comic.ttf);
+}
+
+body{
+    background-color: var(--light);
+}
+header nav h1{
+    font-family: flag;
+    font-size: 72px;
+    color: var(--dark);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+header nav img{
+    height: 100px;
+    position: fixed;
+    right: 10px;
+}
+.wrapper{
+    padding: 20px;
+}
+.pizza-box{
+    margin: 20px auto;
+    width: 100%;
+    background-color: var(--colored);
+    border-radius: 10px;
+    padding: 10px;
+    word-wrap: break-word;
+}
+.pizza-box img{
+    width: 100%;
+    cursor: pointer;
+}
+.pizza-box h1{
+    width: 100%;
+    background-color: var(--light);
+    text-align: center;
+    font-family: comics;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+.edit-remove{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-remove a{
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--dark);
+    font-family: comics;
+    width: 100%;
+    text-align: center;
+    margin: 0 10px;
+    font-size: 24px;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add-wrapper{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-wrapper form{
+    width: 400px;
+    background-color: var(--colored);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.add-wrapper form h1{
+    color: var(--dark);
+    font-family: comics;
+    margin-bottom: 10px;
+    background-color: var(--light);
+    border-radius: 10px;
+}
+.name{
+    width: 100%;
+    font-size: 18px;
+    color: var(--dark);
+    font-family: comics;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--light);
+}
+.ingredients{
+    width: 100%;
+    font-size: 18px;
+    color: var(--dark);
+    font-family: comics;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--light);
+    margin-bottom: 10px;
+}
+.add-wrapper form button{
+    font-size: 18px;
+    color: var(--light);
+    font-family: comics;
+    padding: 10px 20px;
+    background-color: var(--dark);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn{
+    font-size: 18px;
+    color: var(--light);
+    font-family: comics;
+    padding: 8px 15px;
+    background-color: var(--dark);
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ingredients-box{
+    width: 400px;
+    height: 500px;
+    background-color: var(--colored);
+    border-radius: 10px;
+    font-family: comics;
+    padding: 20px;
+    text-align: center;
+}
+.ingredients-box p{
+    width: 100%;
+    font-size: 18px;
+    color: var(--dark);
+    font-family: comics;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--light);
+    word-wrap: break-word;
+    height: 370px;
+}
+.ingredients-box h1{
+    width: 100%;
+    color: var(--dark);
+    font-family: comics;
+    margin-bottom: 2px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--light);
+    word-wrap: break-word;
+}
+@media only screen and (min-width:1000px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .pizza-box{
+        width: auto;
+        margin: 10px;
+    }
+}

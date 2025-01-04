@@ -1,0 +1,15 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<a href="{% url 'home' %}" class="btn">Back</a>
+<div class="add-wrapper">
+    <div class="ingredients-box">
+        <h1>{{item.name}}</h1>
+        <br>
+        <p>
+            {{item.ingredients}}
+        </p>
+    </div>
+</div>
+{% endblock %}

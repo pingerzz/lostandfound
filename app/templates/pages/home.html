@@ -1,0 +1,30 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+    <nav>
+        <h1>Item</h1>
+        <a href="{% url 'add-item' %}"><img src="{% static 'media/create.png' %}" alt=""></a>
+    </nav>
+</header>
+<div class="wrapper">
+
+    {% for p in item %}
+    <div class="pizza-box">
+        <a href="{% url 'view-item' p.id %}">
+            <img src="{% static 'media/pizza.png' %}" alt="">
+        </a>
+
+        <h1>{{p.name}}</h1>
+
+        <div class="edit-remove">
+            <a href="{% url 'edit-item' p.id %}">EDIT</a>
+            <a href="{% url 'delete-item' p.id %}">DELETE</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
