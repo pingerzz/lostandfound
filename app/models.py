@@ -1,4 +1,5 @@
 from django.db import models
+<<<<<<< HEAD
 from django.contrib.auth.models import User
 from django.urls import reverse
 
@@ -55,3 +56,12 @@ class LostAndFoundItem(models.Model):
         verbose_name_plural = "Lost and Found Items"
 
 
+=======
+
+class Item(models.Model):
+    name = models.CharField(max_length=50, blank=True, null=True)
+    desc = models.TextField(max_length=250, blank=True)
+
+    def __str__(self):
+        return self.name
+>>>>>>> 99fd0ab869c0cdfd9b146f3a3b0f1108d21af5d3
