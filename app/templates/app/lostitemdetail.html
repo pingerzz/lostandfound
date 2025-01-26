@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Lost Items Details</h1>
+
+<h2>{{lostitem.item}}</h2>
+<p>{{lostitem.description}}</p>
+<p>{{lostitem.category}}</p>
+<p>{{lostitem.location}}</p>
+<p>{{lostitem.date}}</p>
+<p>{{lostitem.contact_name}}</p>
+<p>{{lostitem.contact_phone}}</p>
+<p>{{lostitem.status}}</p>
+
+{% endblock %}

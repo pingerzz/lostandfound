@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Lost Items</h1>
+
+
+{% for item in lostitem %}
+
+<a href="{% url 'lost-item-view' item.pk %}"><p>{{item.item}}</p></a>
+
+<p>{{item.status}}</p>
+
+<a href="{% url 'update-lost-item' item.pk %}">Update</a>
+<a href="{% url 'delete-lost-item' item.pk %}">Deletee</a>
+
+{% endfor %}
+
+{% endblock %}
