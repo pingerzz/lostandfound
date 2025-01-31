@@ -1,0 +1,30 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+    <nav>
+        <h1>Pizza Maker</h1>
+        <a href="{% url 'add-pizza' %}"><img src="{% static 'media/create.png' %}" alt=""></a>
+    </nav>
+</header>
+<div class="wrapper">
+
+    {% for p in pizza %}
+    <div class="pizza-box">
+        <a href="{% url 'view-pizza' p.id %}">
+            <img src="{% static 'media/pizza.png' %}" alt="">
+        </a>
+
+        <h1>{{p.name}}</h1>
+
+        <div class="edit-remove">
+            <a href="{% url 'edit-pizza' p.id %}">EDIT</a>
+            <a href="{% url 'delete-pizza' p.id %}">DELETE</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

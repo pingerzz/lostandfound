@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Maker</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'media/pizza-icon.png' %}" type="image/x-icon">
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+    <script src="{% static 'js/sript.js' %}"></script>
+</body>
+</html>

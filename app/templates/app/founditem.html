@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <h1>Found Items</h1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Contact Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in founditems %}
+                <tr>
+                    <td><a href="{% url 'lost-item-view' item.pk %}">{{ item.item }}</a></td>
+                    <td>{{ item.status }}</td>
+                    <td>{{ item.category }}</td>
+                    <td>{{ item.location }}</td>
+                    <td>{{ item.date }}</td>
+                    <td>{{ item.contact_name }}</td>
+                    <td>
+                        <a href="{% url 'update-lost-item' item.pk %}">Update</a> |
+                        <a href="{% url 'delete-lost-item' item.pk %}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Back Button -->
+    <a href="{% url 'lost-item' %}" class="btn btn-secondary">Back</a>
+{% endblock %}
