@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 747490cf7a9693f695fb9a8700a8c73271d7b9b7
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
 
+<<<<<<< HEAD
 <h1>Item Detailed Description</h1>
 
 <p>{{ lostitem.description }}</p>
@@ -21,3 +33,17 @@
 </div>
 
 {% endblock %}
+=======
+<h1>Lost Items Details</h1>
+
+<h2>{{lostitem.item}}</h2>
+<p>{{lostitem.description}}</p>
+<p>{{lostitem.category}}</p>
+<p>{{lostitem.location}}</p>
+<p>{{lostitem.date}}</p>
+<p>{{lostitem.contact_name}}</p>
+<p>{{lostitem.contact_phone}}</p>
+<p>{{lostitem.status}}</p>
+
+{% endblock %}
+>>>>>>> 747490cf7a9693f695fb9a8700a8c73271d7b9b7
